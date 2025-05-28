@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Визуализация данных</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://d3js.org/d3.v7.min.js"> </script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/chart.js"></script>
+</head>
+<body>
+<h3>Список самых высоких зданий</h3>
+<p>
+  <label>Значение по оси OX
+    <div id="options">
+      <input type="radio" name="oxChoice" value="city" checked id="cityRadio">Страна<br>
+      <input type="radio" name="oxChoice" value="year" id="yearRadio">Год
+    </div>
+  </label>
+</p>
+<p>
+  <label>Значение по оси OY<br>
+    <input type="checkbox" id="chbMin">Минимальные<br>
+    <input type="checkbox" id="chbMax">Максимальные
+  </label>
+</p>
+<p><label>
+  Тип графика
+  <select id="selectTypeGraph">
+    <option value=1>Точечная диаграмма</option>
+    <option value=2>Гистограмма</option>
+  </select>
+</label></p>
+<p><button id="bthCrateGraph">Построить</button></p>
+<h3 id="error"></h3>
+<svg></svg>
+<p><button id="bthSwitchTable">Скрыть таблицу</button></p>
+
+<table id="build" border="1"> </table>
+</body>
+</html>
